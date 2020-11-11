@@ -1,4 +1,7 @@
 {
+  "server": {
+    "port": 8888
+  },
   "services": {
     "db": {
       "client": {
