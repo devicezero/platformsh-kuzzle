@@ -7,6 +7,9 @@ name: kuzzle
 # The type of the application to build.
 type: nodejs:14
 
+variables:
+    env:
+      NODE_ENV: 'production'
 hooks:
     build: |
       set -e
