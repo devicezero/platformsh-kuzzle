@@ -29,7 +29,7 @@ const fs = require('fs');
 
 const yargs = require('yargs');
 
-const { Backend } = require('../index');
+const { Backend } = require('../index.ts');
 
 function loadJson (path) {
   if (! path) {
