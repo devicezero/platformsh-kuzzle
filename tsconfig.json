@@ -6,7 +6,7 @@
     "target": "es2020",
     "moduleResolution": "node",
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": "/app",
     "paths": {
       "*": [
         "node_modules/*",
