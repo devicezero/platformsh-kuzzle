@@ -7,6 +7,17 @@ name: kuzzle
 # The type of the application to build.
 type: nodejs:14
 
+hooks:
+    build: |
+      set -e
+      # install dependencies for all enabled plugins
+      for PLUGIN in ./plugins/enabled/*; do
+        if [ -d "${PLUGIN}" ]; then
+          ( cd "${PLUGIN}" && npm install )
+        fi
+      done
+
+
 relationships:
     elasticsearch: "searchelastic:elasticsearch"
     rediscache: "cacheredis:redis"
