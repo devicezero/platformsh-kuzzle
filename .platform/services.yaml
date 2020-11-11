@@ -1,0 +1,6 @@
+searchelastic:
+    type: elasticsearch:5.4
+    disk: 1024
+
+cacheredis:
+    type: redis:3.2

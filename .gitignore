@@ -29,7 +29,7 @@ docker-compose-custom.yml
 .tags
 
 # Kuzzle
-.kuzzlerc
+# .kuzzlerc
 /*.log
 
 #swagger
@@ -78,4 +78,3 @@ lib/util/interfaces.js
 lib/core/shared/sdk/embeddedSdk.js
 features-sdk/support/application/functional-tests-app.js
 /index.js
-

@@ -1,0 +1,17 @@
+{
+  "services": {
+    "db": {
+      "client": {
+        "host": "http://elasticsearch.internal:9200",
+        "apiVersion": "5.4"
+      }
+    },
+    "internalCache": {
+      "backend": "redis",
+      "node": {
+        "host": "rediscache.internal",
+        "port": 6379
+      }
+    }
+  }
+}

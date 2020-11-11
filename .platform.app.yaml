@@ -1,0 +1,20 @@
+# This file describes an application. You can have multiple applications
+# in the same project.
+
+# The name of this app. Must be unique within a project.
+name: kuzzle
+
+# The type of the application to build.
+type: nodejs:14
+
+relationships:
+    elasticsearch: "searchelastic:elasticsearch"
+    rediscache: "cacheredis:redis"
+
+# The size of the persistent disk of the application (in MB).
+disk: 1024
+
+# The configuration of app when it is exposed to the web.
+web:
+  commands:
+    start: "bin/kuzzle"
