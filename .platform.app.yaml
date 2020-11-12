@@ -20,7 +20,7 @@ hooks:
         fi
       done
 
-      npm run build
+      node_modules/typescript/bin/tsc
 
 
 relationships:
