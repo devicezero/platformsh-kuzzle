@@ -5,8 +5,7 @@
 name: kuzzle
 
 # The type of the application to build.
-type: nodejs:12
-flavor: none
+type: nodejs:14
 
 variables:
     env:
@@ -14,13 +13,14 @@ variables:
 hooks:
     build: |
       set -e
-      npm install --production
       # install dependencies for all enabled plugins
       for PLUGIN in ./plugins/enabled/*; do
         if [ -d "${PLUGIN}" ]; then
           ( cd "${PLUGIN}" && npm install )
         fi
       done
+
+      npm run build
 
 
 relationships:
