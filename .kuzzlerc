@@ -530,7 +530,8 @@
       "backend": "elasticsearch",
       "aliases": ["storageEngine"],
       "client": {
-        "node": "http://elasticsearch.internal:9200"
+        "node": "http://elasticsearch.internal:9200",
+        "apiVersion": "5.4"
       },
       // default mapping applied to all collections
       "commonMapping": {
