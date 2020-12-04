@@ -7,6 +7,12 @@
     type: upstream
     upstream: "kuzzle:http"
 
+"https://{default}/ws":
+    type: upstream
+    upstream: "kuzzle:http"
+    cache:
+        enabled: false
+
 "https://admin.{default}/":
     type: upstream
     upstream: "kuzzle-admin:http"
