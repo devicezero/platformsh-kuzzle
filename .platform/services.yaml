@@ -1,5 +1,5 @@
 searchelastic:
-    type: elasticsearch:5.4
+    type: elasticsearch:7.7
     disk: 1024
 
 cacheredis:
