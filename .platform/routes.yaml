@@ -6,3 +6,7 @@
 "https://{default}/":
     type: upstream
     upstream: "kuzzle:http"
+
+"https://admin.{default}/":
+    type: upstream
+    upstream: "kuzzle-admin:http"
