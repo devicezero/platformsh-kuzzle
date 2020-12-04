@@ -19,11 +19,6 @@ hooks:
 
       npm run build
 
-
-relationships:
-    elasticsearch: "searchelastic:elasticsearch"
-    rediscache: "cacheredis:redis"
-
 # The size of the persistent disk of the application (in MB).
 disk: 1024
 
