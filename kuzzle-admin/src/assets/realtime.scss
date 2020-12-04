@@ -1,0 +1,25 @@
+$notif-volatile-clr: #60ab61;
+$notif-created-updated-clr: #5e99cc;
+$notif-deleted-clr: #c75856;
+$notif-pending-clr: #dcac59;
+$notif-user-clr: #917fc3;
+
+.message-volatile {
+  color: $notif-volatile-clr;
+}
+
+.message-created-updated-doc {
+  color: $notif-created-updated-clr;
+}
+
+.message-deleted-doc {
+  color: $notif-deleted-clr;
+}
+
+.message-pending {
+  color: $notif-pending-clr;
+}
+
+.message-user {
+  color: $notif-user-clr;
+}
