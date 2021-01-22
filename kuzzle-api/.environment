@@ -1,0 +1,19 @@
+# server port config
+export kuzzle_server__port=$(echo $PORT)
+
+# redis config
+export kuzzle_services__internalCache__node__host=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".rediscache[0].host")
+export kuzzle_services__internalCache__node__port=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".rediscache[0].port")
+export kuzzle_services__memoryStorage__node__host=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".rediscache[0].host")
+export kuzzle_services__memoryStorage__node__port=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".rediscache[0].port")
+
+# elasticsearch config
+export es_host=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".elasticsearch[0].host")
+export es_port=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".elasticsearch[0].port")
+export kuzzle_services__storageEngine__client__node="http://${es_host}:${es_port}"
+
+# kourou CLI config
+export KUZZLE_HOST=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.primary==true) | .key')
+export KUZZLE_PORT=443
+export KUZZLE_USERNAME=admin
+export KUZZLE_PASSWORD=admin

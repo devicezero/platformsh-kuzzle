@@ -1,0 +1,117 @@
+# Node
+node_modules
+npm-debug.log*
+.node_history
+.reify-cache
+
+# Exclude coverage report
+coverage
+.nyc_output
+
+# Plugin config folder
+config/plugins/
+/dump
+
+# IDE
+.idea
+
+# Docker
+docker-compose-custom.yml
+
+# vagrant
+/.vagrant
+
+# Other
+.DS_STORE
+*#
+*~
+.*.swp
+.tags
+
+# Kuzzle
+.kuzzlerc
+/*.log
+
+#swagger
+kuzzle-swagger.*
+
+#sonarqube
+.sonar
+.scannerwork
+.sonarlint
+/sonarlint.json
+
+#plugins
+plugins/available/*
+!plugins/available/functional-test-plugin
+!plugins/available/kuzzle-plugin-cluster
+
+plugins/enabled/*
+!plugins/enabled/.keep
+
+#secrets files
+config/secrets.json
+config/testsecrets.json
+config/testsecrets.enc.json
+
+config/kuzzlerc
+
+#tests files
+index-dump/*
+
+#doc framework
+doc/framework
+frontmatter-errors.json
+
+#vscode
+.vscode
+
+# version upgrades
+upgrade-*.report
+
+# JS generated files from TS
+*.d.ts
+!lib/types/Global.d.ts
+*.js.map
+
+/index.js
+lib/core/application/backend.js
+lib/core/application/backendCluster.js
+lib/core/shared/sdk/embeddedSdk.js
+lib/core/plugin/pluginContext.js
+lib/api/request/index.js
+lib/api/request/kuzzle-request.js
+lib/api/request/requestContext.js
+lib/api/request/requestInput.js
+lib/api/request/requestResponse.js
+lib/kerror/errors/badRequestError.js
+lib/kerror/errors/externalServiceError.js
+lib/kerror/errors/forbiddenError.js
+lib/kerror/errors/gatewayTimeoutError.js
+lib/kerror/errors/index.js
+lib/kerror/errors/internalError.js
+lib/kerror/errors/kuzzleError.js
+lib/kerror/errors/notFoundError.js
+lib/kerror/errors/partialError.js
+lib/kerror/errors/pluginImplementationError.js
+lib/kerror/errors/preconditionError.js
+lib/kerror/errors/serviceUnavailableError.js
+lib/kerror/errors/sizeLimitError.js
+lib/kerror/errors/tooManyRequestsError.js
+lib/kerror/errors/unauthorizedError.js
+lib/types/Controller.js
+lib/types/ControllerDefinition.js
+lib/types/Deprecation.js
+lib/types/EventHandler.js
+lib/types/InternalLogger.js
+lib/types/Plugin.js
+lib/types/PluginManifest.js
+lib/types/RequestPayload.js
+lib/types/ResponsePayload.js
+lib/types/StrategyDefinition.js
+lib/types/Token.js
+lib/types/User.js
+lib/types/index.js
+lib/util/interfaces.js
+lib/util/mutex.js
+features-sdk/support/application/functional-tests-app.js
