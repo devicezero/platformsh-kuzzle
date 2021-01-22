@@ -13,7 +13,8 @@ export es_port=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".elasti
 export kuzzle_services__storageEngine__client__node="http://${es_host}:${es_port}"
 
 # kourou CLI config
-export KUZZLE_HOST=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.primary==true) | .key')
+export route_ws=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.primary==true) | .key' | sed 's/https:\/\///')
+export KUZZLE_HOST="${route_ws}ws"
 export KUZZLE_PORT=443
 export KUZZLE_USERNAME=admin
 export KUZZLE_PASSWORD=admin
