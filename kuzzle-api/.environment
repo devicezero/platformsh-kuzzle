@@ -17,4 +17,3 @@ export route_ws=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] 
 export KUZZLE_HOST="${route_ws}ws"
 export KUZZLE_PORT=443
 export KUZZLE_USERNAME=admin
-export KUZZLE_PASSWORD=admin
